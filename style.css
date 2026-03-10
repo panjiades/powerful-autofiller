@@ -1,0 +1,511 @@
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  scroll-snap-type: y mandatory; /* wajib snap ke section */
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+section {
+  scroll-snap-align: start; /* setiap section mulai dari atas layar */
+  min-height: 100vh;        /* tiap section setinggi layar penuh */
+  display: flex;
+  justify-content: center;
+
+}
+
+/* Gradient untuk kata Welcome */
+.gradient-text {
+  background: linear-gradient(90deg, #4a90e2, #6a5acd, #00c9a7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+/* Warna hijau untuk tanda centang */
+.check {
+  color: green;
+  font-weight: bold;
+}
+
+/* Reset dasar */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f9;
+  color: #333;
+  overflow: hidden; /* matikan scroll global */
+
+}
+
+/* Header melayang */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #4a90e2, #6a5acd, #00c9a7);
+  color: white;
+  height: 50px; /* tinggi header */
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.header-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Title + Logo */
+.title-container {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.logo {
+  height: 25px;
+  width: auto;
+  background: white;       /* kotak putih */
+  padding: 3px 4px;        /* ruang di sekitar logo */
+  border-radius: 6px;      /* sudut rounded */
+}
+
+.header-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+.menu-container a {
+  display: inline-block;       /* biar kotaknya hanya mengelilingi teks link */
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+  padding: 6px 12px;           /* ruang dalam kotak */
+  border-radius: 6px;          /* rounded */
+  transition: all 0.3s ease;
+}
+
+
+.menu-container a.active {
+  background: white;           /* kotak putih */
+  color: black;                /* teks hitam */
+  border-radius: 6px;
+}
+
+/* Hover effect */
+.menu-container a:hover {
+  background: black;   /* kotak hitam */
+  color: white;        /* teks putih */
+  border-radius: 6px;
+}
+
+
+/* Section styling */
+section {
+  display: block; /* default, elemen block akan otomatis vertikal */
+  text-align: center;
+  padding: 100px 20px;
+  min-height: 100vh;   /* tinggi minimal layar penuh */
+  max-height: 100vh;   /* tidak lebih dari layar */
+  overflow-y: auto;    /* scroll internal jika konten lebih panjang */
+
+}
+
+/* ============ SECTION HERO ========== */
+.hero {
+  background: white;   /* latar belakang putih */
+  color: black;        /* teks hitam agar kontras */
+  padding: 60px 20px;  /* beri ruang di dalam section */
+  text-align: center;  /* opsional: rata tengah */
+   min-height: 100vh; /* fleksibel, bisa lebih tinggi */
+}
+
+.hero h1 {
+  margin-bottom: 5px;
+Margin-top: 5px;
+padding-top: 15px;
+  animation-delay: 0.2s; /* muncul duluan */
+}
+
+.hero p {
+  margin-top: 0;
+  padding-top: 15px;
+  animation-delay: 0.6s; /* muncul setelah h1 */
+
+}
+.hero-row {
+  display: flex;
+  justify-content: center;   /* rata tengah */
+  align-items: center;
+  gap: 20px;                 /* jarak antar elemen */
+  margin-top: 10px;          /* jarak dari paragraf terakhir */
+  flex-wrap: wrap;  
+	padding-bottom: 30px;  /* biar responsif di layar sempit */
+	padding-top: 10px;
+}
+
+.hero-img2 {
+  width: 135px;              /* sesuaikan ukuran gambar */
+  height: auto;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.hero-img2:hover {
+  background: linear-gradient(135deg, #4a90e2, #6a5acd, #00c9a7);
+  padding: 3px;       /* beri ruang untuk gradient border */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.hero-img {
+  width: 500px;              /* sesuaikan ukuran gambar */
+  height: auto;
+  border-radius: 10px;        /* sudut membulat */
+  box-shadow: 0 3px 7px rgba(0,0,0,0.2);
+}
+.hero-img:hover {
+  background: linear-gradient(135deg, #4a90e2, #6a5acd, #00c9a7);
+  padding: 3px;       /* beri ruang untuk gradient border */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+.hero-btn {
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #4a90e2, #6a5acd, #00c9a7);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: linear-gradient(90deg, #00c9a7, #6a5acd, #4a90e2);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3); /* bayangan saat hover */
+  transform: translateY(-2px);             /* sedikit naik untuk efek interaktif */
+}
+
+
+/* ============ SECTION PRICNG ========== */
+.pricing {
+  background: white;   /* latar belakang putih */
+  color: black;        /* teks hitam agar kontras */
+  text-align: center;  /* opsional: rata tengah */
+   min-height: 100vh; /* fleksibel, bisa lebih tinggi */
+   width: 100%;
+   padding-bottom: 30px;
+   
+}
+#pricing {
+  width: 100%;
+  padding: 40px 20px;
+  /* jangan pakai height:100vh kalau konten lebih panjang */
+  min-height: 100vh;   /* cukup minimal setinggi layar */
+  box-sizing: border-box;
+}
+.pricing p {
+  margin-top: 0;
+  animation-delay: 0.6s; /* muncul setelah h1 */
+}
+
+.pricing h1 {
+  margin-top: 0;
+  padding-top: 35px;
+}
+
+.pricing-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* biar responsif */
+  margin-top: 30px;
+}
+
+
+
+.price-card {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: 100%;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  text-decoration: none; /* hilangkan underline */
+  color: inherit;        /* biar teks tetap normal */
+}
+
+.price-card:hover {
+  border-image: linear-gradient(90deg, #4a90e2, #6a5acd, #00c9a7) 1;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  transform: translateY(-2px);
+}
+
+.price-top {
+  font-size: 34px;
+  font-weight: bold;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.price-support,
+.price-country {
+  padding: 10px;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* trik: dorong footer ke bawah */
+.price-footer {
+  margin-top: auto; 
+  background: linear-gradient(90deg, #4a90e2, #6a5acd, #00c9a7);
+  text-align: center;
+  padding: 15px;
+  color: #fff;
+  font-weight: bold;
+}
+.price-footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.comparison-table {
+  margin: 0 auto;              /* posisikan tabel di tengah */
+  border-collapse: collapse;   /* rapikan border */
+  width: 40%;                  /* atur lebar tabel (bisa disesuaikan) */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* shadow tipis */
+}
+
+.comparison-table th,
+.comparison-table td {
+  border: 1px solid #ddd;
+  padding: 12px 16px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.comparison-table thead th {
+  background: linear-gradient(90deg, #4a90e2, #6a5acd, #00c9a7); /* gradasi */
+  color: #fff;               /* teks putih */
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.comparison-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* striping baris */
+}
+
+.comparison-table tbody tr:hover {
+  background-color: #f1f1f1; /* efek hover */
+}
+.cross {
+  color: #e74c3c;       /* merah */
+  font-weight: bold;
+}
+
+.check {
+  color: #27ae60;       /* hijau */
+  font-weight: bold;
+}
+
+.drive-icon {
+  width: 18px;       /* ukuran ikon */
+  height: 18px;
+  vertical-align: middle; /* sejajar dengan teks */
+  margin-right: 5px; /* jarak antara ikon dan teks */
+}
+.create-icon {
+  width: 18px;       /* ukuran ikon */
+  height: 18px;
+  vertical-align: middle; /* sejajar dengan teks */
+  margin-right: 5px; /* jarak antara ikon dan teks */
+}
+
+
+
+
+/* TUTORIAL SECTION*/
+
+.tutorial-section {
+  background: #f0ebf8;
+  padding: 40px 10px;
+  position: relative;
+}
+
+.tutorial-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.tutorial-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333; /* warna item bold */
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.tutorial-title h1 {
+margin: 0px;
+padding: 0px;
+}
+
+.tutorial-desc {
+  font-size: 18px;
+  color: #555; /* warna item biasa */
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+
+.tutorial-images {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.tutorial-img {
+  max-width: 650px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* hover outline gradient */
+.tutorial-img:hover {
+  border: 2px solid transparent;
+  border-image: linear-gradient(90deg, #4a90e2, #6a5acd, #00c9a7) 1;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+/* strip gradient di bawah container */
+/* Strip gradient sebagai elemen biasa */
+.tutorial-outline {
+  width: 100%;
+  height: 2px;
+  margin-top: 20px; /* jarak dari konten */
+  background: linear-gradient(90deg, #4a90e2, #6a5acd, #00c9a7);
+}
+.info-box {
+  max-width: 550px;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 10px;             /* rounded */
+  background-color: #f0f0f0;       /* abu-abu awal */
+  border: 2px dashed #000;         /* outline putus-putus hitam */
+  transition: background 0.4s ease, border 0.4s ease;
+}
+
+
+.info-box a {
+  text-decoration: none;   /* awal tanpa underline */
+  font-size: 13px;         /* aturan font size */
+  font-weight: bold;
+  color: #333;
+}
+
+.info-box:hover a {
+  color: #f44336;             /* teks jadi putih saat background gradasi */
+  text-decoration: underline; /* underline muncul saat hover */
+}
+.about {
+  background: #f4f4f9;
+}
+
+
+
+
+/* Saat layar sempit */
+@media (max-width: 600px) {
+  header {
+    height: 100px; /* 2x lipat dari default */
+  }
+
+  .header-container {
+    flex-direction: column; /* susun vertikal */
+    align-items: center;
+  }
+
+  .title-container {
+    padding-top: 10px; /* tambahan padding atas */
+  }
+
+  .menu-container {
+    margin-top: 10px; /* menu turun ke bawah judul */
+    justify-content: center;
+  }
+.hero {
+  padding: 120px 20px;
+  width: 100%;
+  min-height: 100vh; /* isi section minimal setinggi layar */
+  box-sizing: border-box; /* padding dihitung dalam tinggi total */
+  
+}
+
+}
+
+
+.about {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 2px 1fr; /* kiri | separator | kanan */
+  gap: 20px;
+  align-items: center;
+}
+
+.about-left .text-wrapper {
+  text-align: center; /* rata tengah */
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.separator {
+  background-color: #ccc;
+  width: 2px;
+  height: 100%;
+}
+
+.about-right {
+  text-align: left; /* rata kiri */
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.contact-item .icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+/* Footer melayang */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #222;
+  color: #ccc;
+  text-align: center;
+  height: 30px; /* setengah dari header */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8em;
+}
