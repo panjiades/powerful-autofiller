@@ -3,21 +3,331 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Powerfull Auto Filler</title>
-  <link rel="stylesheet" href="index.css">
+  <title>Powerful Google Form Filler</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- favicon standar -->
+  <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
+
+
+  <!-- Header -->
   <header>
-    <h1>Powerfull Auto Filler</h1>
+    <div class="header-container">
+      <div class="title-container">
+        <img src="logo2.png" alt="Logo" class="logo">
+        <div class="header-title">Powerful Google Form Filler</div>
+      </div>
+      <nav class="menu-container">
+        <a href="#hero" class="active">Home</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#tutorial">Usage tutorials</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <p>Selamat datang di halaman info EXTENSI 3.  
-       Chrome extension yang membantu mengisi form secara otomatis, cepat, dan aman.</p>
-  </main>
 
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+  <h1>
+    <span class="gradient-text">Save your time !!!</span>
+  </h1>
+  <p>Fill smarter, fast and automated solution for filling out Google Forms easily. Many features work.
+   <br>
+   Text input <span class="check">✓</span>  
+    Choice <span class="check">✓</span>  
+    Checkbox <span class="check">✓</span>  
+    Drop-down <span class="check">✓</span>  
+    Date&Time <span class="check">✓</span>
+	...,etc
+  </p>
+  <!-- Row flex -->
+  <div class="hero-row">
+    <img src="Gambar1.png" alt="Preview 1" class="hero-img">
+    <img src="Gambar2.png" alt="Preview 2" class="hero-img2">
+  </div>
+    <button class="hero-btn">Get Extension Here</button>
+</section>
+
+
+
+<!-- Pricing Section -->
+<section id="pricing" class="pricing">
+  <h1>
+    <span class="gradient-text">Get product key from 3rd Marketplace..</span>
+  </h1>
+  <p>You can get product keys from several marketplace providers. This is intended to make it easier for users to make payments using their card options.</p>
+
+  <div class="pricing-container">
+  
+    <!-- Card 1 -->
+	<div class="price-card">
+      <a href="https://mayar.id" target="_blank" class="price-card" title="Click to buy via Gumroad">
+	  <div class="price-top">$ 5</div>
+	  <div class="price-support">Payment Support : Paypal, Debit Card, Credit Card, American Express, Aple Pay, Google Pay </div>	  
+	  <div class="price-country">For Country : All Country (Global)</div>
+	  <div class="price-footer">Gumroad</div>
+	 </a>
+    </div>
+    
+    <!-- Card 2 -->
+    <div class="price-card">
+      <a href="https://mayar.id" target="_blank" class="price-card" title="Klik untuk beli melaui di Mayar.id">
+	  <div class="price-top">Rp. 55.000</div>
+	  <div class="price-support">Payment Support : QRISH, DANA, GOPAY, OVO, Virtual Account (VA) </div>	
+	  <div class="price-country">For Country : Indonesia</div>
+	  <div class="price-footer">Mayar.id</div>
+	 </a>
+    </div>
+	
+  </div>
+  <br>
+  <br>
+ <h1>
+    <span class="gradient-text">Benefits :</span>
+  </h1>
+  
+  <table class="comparison-table">
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>Free</th>
+      <th>Pro</th>
+    </tr>
+  </thead>
+  <tbody>
+    <td>
+    <img src="create.png" alt="Google Drive" class="create-icon" />
+    Create data
+  </td>
+      <td><span class="cross">3</span></td>
+      <td><span class="check">✔ Unlimited</span></td>
+    </tr>
+<tr>
+  <td>
+    <img src="drive-logo.png" alt="Google Drive" class="drive-icon" />
+    Backup to Google Drive
+  </td>
+    <td><span class="cross">✘</span></td>
+  <td><span class="check">✔</span></td>
+</tr>
+
+<tr>
+  <td>
+    <img src="drive-logo.png" alt="Google Drive" class="drive-icon" />
+    Restore from Google Drive
+  </td>
+    <td><span class="cross">✘</span></td>
+  <td><span class="check">✔</span></td>
+</tr>
+<tr>
+      <td>Local autosave</td>
+      <td><span class="check">✔</span></td>
+      <td><span class="check">✔</span></td>
+    </tr>
+
+<tr>
+  <td class="wrap-text">
+    Email is always PRO, wherever you log in
+  </td>
+  <td><span class="cross"></span></td>
+  <td><span class="check">✔</span></td>
+</tr>
+  </tbody>
+</table>
+<br>
+<br>
+<br>
+<br>
+
+</section>
+
+
+  <!-- Tutorial Section -->
+<section id="tutorial" class="tutorial-section">
+<br>
+<h1 class="tutorial-title">Example Form : </h1>
+<div class="info-box">
+	<a href="https://docs.google.com/forms/d/e/1FAIpQLSe9JS-DmfyC0a2AOWTrjnu3UObS99b4PeYQUo3DfyxNGXMniQ/viewform" 
+		target="_blank" 
+		rel="noopener noreferrer">
+	<span class="info-link">
+    <span>https://docs.google.com/forms/d/e/1FAIpQLSe9JS-DmfyC0a2AOWTrjnu3UObS99b4PeYQUo3DfyxNGXMniQ/viewform</span>
+    </span>
+  </a>
+</div>
+
+
+<div class="tutorial-outline"></div>
+  <div class="tutorial-container">
+    <h1 class="tutorial-title">Text Function</h1>
+    <p class="tutorial-desc">
+      Fill name, email, description ..etc
+    </p>
+    <div class="tutorial-images">
+      <img src="text1.png" alt="Gambar 1" class="tutorial-img" />
+      <img src="text2.png" alt="Gambar 2" class="tutorial-img" />
+	</div>
+  </div>
+<div class="tutorial-outline"></div>
+  <div class="tutorial-container">
+    <h1 class="tutorial-title">Choice Function</h1>
+    <p class="tutorial-desc">
+      Answer &lt;your text&gt; to other answer.
+    </p>
+    <div class="tutorial-images">
+      <img src="choice1.png" class="tutorial-img" />
+      <img src="choice2.png" class="tutorial-img" />
+    </div>
+  </div>
+<div class="tutorial-outline"></div>
+  <div class="tutorial-container">
+    <h1 class="tutorial-title">Checkbox Function</h1>
+    <p class="tutorial-desc">
+      Text answer or Other Answer with &lt; &gt;
+
+    </p>
+    <div class="tutorial-images">
+      <img src="checkbox1.png" class="tutorial-img" />
+      <img src="checkbox2.png" class="tutorial-img" />
+    </div>
+  </div>
+  <div class="tutorial-outline"></div>
+  <div class="tutorial-container">
+    <h1 class="tutorial-title">Drop-Down Function</h1>
+    <p class="tutorial-desc">
+       Text answer.
+    </p>
+    <div class="tutorial-images">
+      <img src="dropdown1.png" class="tutorial-img" />
+      <img src="dropdown2.png" class="tutorial-img" />
+    </div>
+  </div>
+  <div class="tutorial-outline"></div>
+  <div class="tutorial-container">
+    <h1 class="tutorial-title">Linear Function</h1>
+    <p class="tutorial-desc">
+      -
+    </p>
+    <div class="tutorial-images">
+      <img src="linear1.png" class="tutorial-img" />
+      <img src="linear2.png" class="tutorial-img" />
+    </div>
+  </div>
+  <div class="tutorial-outline"></div>
+  <div class="tutorial-container">
+    <h1 class="tutorial-title">Rating Function</h1>
+    <p class="tutorial-desc">
+      -
+    </p>
+    <div class="tutorial-images">
+      <img src="rating1.png" class="tutorial-img" />
+      <img src="rating2.png" class="tutorial-img" />
+    </div>
+  </div>
+<div class="tutorial-outline"></div>
+  <div class="tutorial-container">
+    <h1 class="tutorial-title">Date Function</h1>
+    <p class="tutorial-desc">
+       Answer &lt;now&gt; to real date today.
+    </p>
+    <div class="tutorial-images">
+      <img src="date1.png" class="tutorial-img" />
+	  <img src="date3.png" class="tutorial-img" />
+      <img src="date2.png" class="tutorial-img" />
+    </div>
+</div>
+<div class="tutorial-outline"></div>
+  <div class="tutorial-container">
+    <h1 class="tutorial-title">Time Function</h1>
+    <p class="tutorial-desc">
+      Answer &lt;now&gt; to realtime in minutes.
+    </p>
+    <div class="tutorial-images">
+      <img src="time1.png" class="tutorial-img" />
+	  <img src="time2.png" class="tutorial-img" />
+      <img src="time3.png" class="tutorial-img" />
+    </div>
+</div>
+<div class="tutorial-outline"></div>
+  <div class="tutorial-container">
+    <h1 class="tutorial-title">Multiple Choice Grid Function</h1>
+    <p class="tutorial-desc">
+      Text,num-Text,num,-Text,num  sparator with -
+    </p>
+    <div class="tutorial-images">
+      <img src="mchoice1.png" class="tutorial-img" />
+      <img src="mchoice2.png" class="tutorial-img" />
+    </div>
+</div>
+<div class="tutorial-outline"></div>
+  <div class="tutorial-container">
+    <h1 class="tutorial-title">Multiple Checkbox Grid Function</h1>
+    <p class="tutorial-desc">
+      Text,num,num-Text,num,num  sparator with -
+    </p>
+    <div class="tutorial-images">
+      <img src="mcheckbox1.png" class="tutorial-img" />
+      <img src="mcheckbox2.png" class="tutorial-img" />
+    </div>
+</div>
+<div class="tutorial-outline"></div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+</section>
+
+
+
+<!-- About Section -->
+<section id="about" class="about">
+<br>
+<br>
+<br>
+  <h2>About</h2>
+  <div class="about-grid">
+    <!-- Grid kiri -->
+    <div class="about-left">
+      <div class="text-wrapper">
+        <p>
+          I'm Panji, the founder and architect of Powerful Google Form Filler. This extension helps you fill out Google Forms quickly, efficiently, and hassle-free. My vision is to deliver a seamless and professional digital experience.
+        </p>
+      </div>
+    </div>
+
+    <!-- Separator -->
+    <div class="separator"></div>
+
+    <!-- Grid kanan -->
+    <div class="about-right container3">
+      <h3>Contact Support :</h3>
+      <div class="contact-item">
+        <img src="gmail.png" alt="Gmail" class="icon">
+        <a href="mailto:powerful.filler@gmail.com">powerful.filler@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <img src="call.png" alt="Call" class="icon">
+        <a href="https://wa.me/6285865480245" target="_blank">+62 858 6548 0245</a>
+      </div>
+      <div class="contact-item">
+        <img src="office.png" alt="Office" class="icon">
+        <span>Dusun 4, Pasinggangan, Central Java, Indonesia - 53192</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2026 EXTENSI 3</p>
+    <p>&copy; 2026 Powerful Google Form Filler</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
