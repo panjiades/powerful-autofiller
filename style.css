@@ -89,13 +89,14 @@ section {
 }
 
 /* Styling untuk Logo di dalam Platform Card */
+/* Styling untuk Logo di dalam Platform Card */
 .platform-logo {
-  width: 60px;       /* Atur lebar logo sesuai kebutuhan */
-  height: 60px;      /* Atur tinggi logo */
-  object-fit: contain;
-  margin: 10px 0 15px 0; /* Jarak antara h3, gambar, dan paragraf */
+  width: 50px;           /* Lebar tetap */
+  height: 50px;          /* Tinggi tetap */
+  max-width: 100%;       /* Mencegah gambar keluar dari kotak card */
+  object-fit: contain;   /* Agar gambar tidak gepeng/terpotong */
+  margin: 10px 0 15px 0; /* Jarak atas dan bawah logo */
 }
-
 
 /* Efek saat tombol di-hover (sedikit bergeser/naik dan bayangan membesar) */
 .platform-btn:hover {
