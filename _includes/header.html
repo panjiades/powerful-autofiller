@@ -1,0 +1,14 @@
+<header>
+  <div class="header-container">
+    <div class="title-container">
+      <img src="/Logo2.png" alt="Logo" class="logo">
+      <div class="header-title">Powerful Filler</div>
+    </div>
+    <nav class="menu-container">
+      <a href="/" class="{% if page.url == '/' or page.url == '/index.html' %}active{% endif %}">Home</a>
+      <a href="/tutorial/google_form" class="{% if page.url contains '/tutorial' %}active{% endif %}">Usage tutorials</a>
+      <a href="/privacy" class="{% if page.url contains '/privacy' %}active{% endif %}">Privacy Policy</a>
+      <a href="/about" class="{% if page.url contains '/about' %}active{% endif %}">About</a>
+    </nav>
+  </div>
+</header>
