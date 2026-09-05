@@ -9,21 +9,8 @@
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <div class="header-container">
-      <div class="title-container">
-        <img src="/Logo2.png" alt="Logo" class="logo">
-        <div class="header-title">Powerful Google Form Filler</div>
-      </div>
-      <nav class="menu-container">
-        <a href="/">Home</a>
-        <a href="/tutorial">Usage tutorials</a>
-        <a href="/privacy">Privacy Policy</a>
-        <a href="/about">About</a>
-      </nav>
-    </div>
-  </header>
+<!-- Panggil header external dari folder _includes/header.html -->
+  {% include header.html %}
 
   <!-- After Payment Section -->
   <section id="after-payment" class="tutorial">
@@ -45,24 +32,50 @@
     </div>
     <br>
     
-    <p>============ Contact Support : ===========</p>
-    <div class="contact-item2">
-      <img src="/gmail.png" alt="Gmail" class="icon">
-      <a href="mailto:powerful.filler@gmail.com">powerful.filler@gmail.com</a>
+  <!-- After Payment Section -->
+  <section id="after-payment" class="tutorial">
+    <h1 class="tutorial-title2">😍 Thankyou for payment 😍</h1>
+    <br>
+    <div class="tutorial-container">
+      <p>Wait 2 minutes after payment, log in to activation section :</p>
+      <div class="tutorial-images">
+        <img src="/after-payment1.png" alt="Gambar 1" class="tutorial-img" />
+      </div>
     </div>
-    <div class="contact-item2">
-      <img src="/call.png" alt="Call" class="icon">
-      <a href="https://wa.me/6285865480245" target="_blank">+62 858 6548 0245</a>
+    <br>
+    <div class="tutorial-container">
+      <p>Then click <strong>"Check Payment Status"</strong> in your extension :</p>
+      <div class="tutorial-images">
+        <img src="/after-payment2.png" alt="Gambar 1" class="tutorial-img" />
+      </div>
+      <p><strong> ✅SUCCESS ACTIVATED ✅ </strong></p>
     </div>
-    ======================================
-    <p>
+    <br>
+    
+    <!-- BUNGKUS KONTAK AGAR BISA DIATUR SEJAJAR -->
+    <div class="contact-support-wrapper">
+      <p class="contact-title">============ Contact Support : ===========</p>
+      
+      <div class="contact-list">
+        <div class="contact-item2">
+          <img src="/gmail.png" alt="Gmail" class="icon">
+          <a href="mailto:powerful.filler@gmail.com">powerful.filler@gmail.com</a>
+        </div>
+        <div class="contact-item2">
+          <img src="/call.png" alt="Call" class="icon">
+          <a href="https://wa.me/6285865480245" target="_blank">+62 858 6548 0245</a>
+        </div>
+      </div>
+      
+      <p class="contact-title">======================================</p>
+    </div>
+
     <br><br><br><br><br><br>
   </section>
 
   <!-- Footer -->
-  <footer>
-    <p>&copy; 2026 Powerful Google Form Filler</p>
-  </footer>
+<!-- Panggil footer external dari folder _includes/footer.html -->
+{% include footer.html %}
 
   <script src="/script.js"></script>
 </body>
