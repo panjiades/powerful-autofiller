@@ -9,8 +9,6 @@ section {
   display: block;
   text-align: center;
   padding: 100px 20px 40px 20px;
-  min-height: auto;       /* Hapus 100vh */
-  max-height: none;       /* Hapus pembatasan tinggi */
   overflow-y: visible;    /* Hilangkan scrollbar internal */
 }
 
