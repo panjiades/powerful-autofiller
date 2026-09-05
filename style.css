@@ -2,14 +2,24 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Hapus aturan main dan section yang mengunci tinggi layar */
+/* Reset dasar body agar scroll halaman kembali normal */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f9;
+  color: #333;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
 
-/* Aturan umum section yang bersih untuk sistem multi-page */
+/* Aturan umum section yang bersih untuk sistem multi-page (bebas scroll ke bawah) */
 section {
   display: block;
   text-align: center;
-  padding: 100px 20px 40px 20px;
-  overflow-y: visible;    /* Hilangkan scrollbar internal */
+  padding: 80px 20px 40px 20px;
+  min-height: auto;
+  max-height: none;
+  overflow-y: visible;
 }
 
 /* ============ AFTER PAYMENT BEAUTIFUL STYLING ============ */
@@ -129,12 +139,11 @@ section {
   align-items: flex-start;
 }
 
-
 /* Styling untuk Box Contact Support yang Sejajar */
 .contact-support-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Membuat semua isi berada di tengah secara horizontal */
+  align-items: center;
   margin-top: 20px;
 }
 
@@ -147,15 +156,14 @@ section {
 .contact-list {
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Jarak antar baris Gmail dan WhatsApp */
-  align-items: flex-start; /* Meratakan sisi kiri teks kontak agar lurus rapi */
+  gap: 10px;
+  align-items: flex-start;
   margin: 10px 0;
 }
 
-/* Memperbaiki .contact-item2 yang sebelumnya ada typo (flex-coloum) */
 .contact-item2 {
   display: flex;
-  align-items: center; /* Menjajarkan ikon dan teks agar sejajar di tengah secara vertikal */
+  align-items: center;
 }
 
 .contact-item2 .icon {
@@ -180,7 +188,7 @@ section {
   display: flex;
   justify-content: center;
   gap: 30px;
-  flex-wrap: wrap; /* Wajib: agar otomatis turun ke bawah saat di layar HP */
+  flex-wrap: wrap;
   margin-top: 40px;
   max-width: 1100px;
   margin-left: auto;
@@ -197,12 +205,12 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid transparent; /* Persiapan untuk hover gradien */
+  border: 2px solid transparent;
 }
 
 .platform-card:hover {
   border-image: linear-gradient(90deg, #4a90e2, #6a5acd, #00c9a7) 1;
-  transform: translateY(-5px); /* Efek melayang sedikit */
+  transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
@@ -217,14 +225,13 @@ section {
   font-size: 15px;
   line-height: 1.5;
   margin-bottom: 25px;
-  flex-grow: 1; /* Mendorong tombol selalu berada di paling bawah */
+  flex-grow: 1;
 }
-
 
 /* Tombol Platform bergradasi dari awal */
 .platform-btn {
   padding: 12px 20px;
-  background: linear-gradient(90deg, #4a90e2, #6a5acd, #00c9a7); /* Warna gradasi awal */
+  background: linear-gradient(90deg, #4a90e2, #6a5acd, #00c9a7);
   color: white;
   text-decoration: none;
   border-radius: 6px;
@@ -234,30 +241,22 @@ section {
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-.platform-card:hover .platform-btn {
-  background: linear-gradient(90deg, #4a90e2, #6a5acd, #00c9a7);
-  color: white;
-}
-
-/* Styling untuk Logo di dalam Platform Card */
-/* Styling untuk Logo di dalam Platform Card */
 .platform-logo {
-  width: 50px;           /* Lebar tetap */
-  height: 50px;          /* Tinggi tetap */
-  max-width: 100%;       /* Mencegah gambar keluar dari kotak card */
-  object-fit: contain;   /* Agar gambar tidak gepeng/terpotong */
-  margin: 10px 0 15px 0; /* Jarak atas dan bawah logo */
+  width: 50px;
+  height: 50px;
+  max-width: 100%;
+  object-fit: contain;
+  margin: 10px 0 15px 0;
 }
 
-/* Efek saat tombol di-hover (sedikit bergeser/naik dan bayangan membesar) */
 .platform-btn:hover {
-  background: linear-gradient(90deg, #00c9a7, #6a5acd, #4a90e2); /* Membalik gradasi saat hover */
+  background: linear-gradient(90deg, #00c9a7, #6a5acd, #4a90e2);
   transform: translateY(-2px);
   box-shadow: 0 6px 15px rgba(0,0,0,0.25);
   color: white;
 }
 
-/* Gradient untuk kata Welcome */
+/* Gradient untuk teks */
 .gradient-text {
   background: linear-gradient(90deg, #4a90e2, #6a5acd, #00c9a7);
   -webkit-background-clip: text;
@@ -265,22 +264,11 @@ section {
   font-weight: bold;
 }
 
-/* Warna hijau untuk tanda centang */
 .check {
   color: green;
   font-weight: bold;
 }
 
-/* Reset dasar */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f4f9;
-  color: #333;
-  /* overflow: hidden; DIHAPUS DISINI */
-}
-
-/* ... (Lanjutkan dengan sisa CSS kamu di bawahnya mulai dari header { ... }) ... */
 /* Header melayang */
 header {
   position: fixed;
@@ -288,7 +276,7 @@ header {
   width: 100%;
   background: linear-gradient(90deg, #4a90e2, #6a5acd, #00c9a7);
   color: white;
-  height: 50px; /* tinggi header */
+  height: 50px;
   display: flex;
   align-items: center;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
@@ -303,7 +291,6 @@ header {
   padding: 0 20px;
 }
 
-/* Title + Logo */
 .title-container {
   display: flex;
   align-items: center;
@@ -313,9 +300,9 @@ header {
 .logo {
   height: 35px;
   width: auto;
-  background: white;       /* kotak putih */
-  padding: 3px 4px;        /* ruang di sekitar logo */
-  border-radius: 6px;      /* sudut rounded */
+  background: white;
+  padding: 3px 4px;
+  border-radius: 6px;
 }
 
 .header-title {
@@ -323,100 +310,85 @@ header {
   font-weight: bold;
 }
 
-
 .menu-container a {
-  display: inline-block;       /* biar kotaknya hanya mengelilingi teks link */
+  display: inline-block;
   color: white;
   text-decoration: none;
   margin-left: 20px;
   font-weight: 500;
-  padding: 6px 12px;           /* ruang dalam kotak */
-  border-radius: 6px;          /* rounded */
+  padding: 6px 12px;
+  border-radius: 6px;
   transition: all 0.3s ease;
 }
 
-
 .menu-container a.active {
-  background: white;           /* kotak putih */
-  color: black;                /* teks hitam */
+  background: white;
+  color: black;
   border-radius: 6px;
 }
 
-/* Hover effect */
 .menu-container a:hover {
-  background: black;   /* kotak hitam */
-  color: white;        /* teks putih */
+  background: black;
+  color: white;
   border-radius: 6px;
 }
 
-
-/* Section styling */
-section {
-  display: block; /* default, elemen block akan otomatis vertikal */
-  text-align: center;
-  padding: 100px 20px;
-  min-height: 100vh;   /* tinggi minimal layar penuh */
-  max-height: 100vh;   /* tidak lebih dari layar */
-  overflow-y: auto;    /* scroll internal jika konten lebih panjang */
-
-}
-
-/* ============ SECTION HERO ========== */
+/* ============ SECTION HERO ============ */
 .hero {
-  background: white;   /* latar belakang putih */
-  color: black;        /* teks hitam agar kontras */
-  padding: 60px 20px;  /* beri ruang di dalam section */
-  text-align: center;  /* opsional: rata tengah */
-   min-height: 100vh; /* fleksibel, bisa lebih tinggi */
+  background: white;
+  color: black;
+  padding: 60px 20px;
+  text-align: center;
+  min-height: auto;
 }
 
 .hero h1 {
   margin-bottom: 5px;
-Margin-top: 5px;
-padding-top: 15px;
-  animation-delay: 0.2s; /* muncul duluan */
+  margin-top: 5px;
+  padding-top: 15px;
 }
 
 .hero p {
   margin-top: 0;
   padding-top: 15px;
-  animation-delay: 0.6s; /* muncul setelah h1 */
-
 }
+
 .hero-row {
   display: flex;
-  justify-content: center;   /* rata tengah */
+  justify-content: center;
   align-items: center;
-  gap: 20px;                 /* jarak antar elemen */
-  margin-top: 10px;          /* jarak dari paragraf terakhir */
-  flex-wrap: wrap;  
-	padding-bottom: 30px;  /* biar responsif di layar sempit */
-	padding-top: 10px;
+  gap: 20px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  padding-bottom: 30px;
+  padding-top: 10px;
 }
 
 .hero-img2 {
-  width: 135px;              /* sesuaikan ukuran gambar */
+  width: 135px;
   height: auto;
   box-shadow: 0 3px 6px rgba(0,0,0,0.2);
 }
 
 .hero-img2:hover {
   background: linear-gradient(135deg, #4a90e2, #6a5acd, #00c9a7);
-  padding: 3px;       /* beri ruang untuk gradient border */
+  padding: 3px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
 .hero-img {
-  width: 500px;              /* sesuaikan ukuran gambar */
+  width: 500px;
   height: auto;
-  border-radius: 10px;        /* sudut membulat */
+  border-radius: 10px;
   box-shadow: 0 3px 7px rgba(0,0,0,0.2);
 }
+
 .hero-img:hover {
   background: linear-gradient(135deg, #4a90e2, #6a5acd, #00c9a7);
-  padding: 3px;       /* beri ruang untuk gradient border */
+  padding: 3px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
+
 .hero-btn {
   padding: 10px 20px;
   background: linear-gradient(90deg, #4a90e2, #6a5acd, #00c9a7);
@@ -430,31 +402,29 @@ padding-top: 15px;
 
 .hero-btn:hover {
   background: linear-gradient(90deg, #00c9a7, #6a5acd, #4a90e2);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.3); /* bayangan saat hover */
-  transform: translateY(-2px);             /* sedikit naik untuk efek interaktif */
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+  transform: translateY(-2px);
 }
 
-
-/* ============ SECTION PRICNG ========== */
+/* ============ SECTION PRICING ============ */
 .pricing {
-  background: white;   /* latar belakang putih */
-  color: black;        /* teks hitam agar kontras */
-  text-align: center;  /* opsional: rata tengah */
-   min-height: 100vh; /* fleksibel, bisa lebih tinggi */
-   width: 100%;
-   padding-bottom: 30px;
-   
+  background: white;
+  color: black;
+  text-align: center;
+  min-height: auto;
+  width: 100%;
+  padding-bottom: 30px;
 }
+
 #pricing {
   width: 100%;
   padding: 40px 20px;
-  /* jangan pakai height:100vh kalau konten lebih panjang */
-  min-height: 100vh;   /* cukup minimal setinggi layar */
+  min-height: auto;
   box-sizing: border-box;
 }
+
 .pricing p {
   margin-top: 0;
-  animation-delay: 0.6s; /* muncul setelah h1 */
 }
 
 .pricing h1 {
@@ -466,11 +436,9 @@ padding-top: 15px;
   display: flex;
   justify-content: center;
   gap: 20px;
-  flex-wrap: wrap; /* biar responsif */
+  flex-wrap: wrap;
   margin-top: 30px;
 }
-
-
 
 .price-card {
   display: flex;
@@ -481,8 +449,8 @@ padding-top: 15px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   border: 2px solid transparent;
   transition: all 0.3s ease;
-  text-decoration: none; /* hilangkan underline */
-  color: inherit;        /* biar teks tetap normal */
+  text-decoration: none;
+  color: inherit;
 }
 
 .price-card:hover {
@@ -505,25 +473,25 @@ padding-top: 15px;
   line-height: 1.4;
 }
 
-/* trik: dorong footer ke bawah */
 .price-footer {
-  margin-top: auto; 
+  margin-top: auto;
   background: linear-gradient(90deg, #4a90e2, #6a5acd, #00c9a7);
   text-align: center;
   padding: 15px;
   color: #fff;
   font-weight: bold;
 }
+
 .price-footer a {
   color: #fff;
   text-decoration: none;
 }
 
 .comparison-table {
-  margin: 0 auto;              /* posisikan tabel di tengah */
-  border-collapse: collapse;   /* rapikan border */
-  width: 40%;                  /* atur lebar tabel (bisa disesuaikan) */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* shadow tipis */
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 40%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .comparison-table th,
@@ -535,47 +503,34 @@ padding-top: 15px;
 }
 
 .comparison-table thead th {
-  background: linear-gradient(90deg, #4a90e2, #6a5acd, #00c9a7); /* gradasi */
-  color: #fff;               /* teks putih */
+  background: linear-gradient(90deg, #4a90e2, #6a5acd, #00c9a7);
+  color: #fff;
   font-weight: bold;
   text-transform: uppercase;
 }
 
 .comparison-table tbody tr:nth-child(even) {
-  background-color: #f9f9f9; /* striping baris */
+  background-color: #f9f9f9;
 }
 
 .comparison-table tbody tr:hover {
-  background-color: #f1f1f1; /* efek hover */
+  background-color: #f1f1f1;
 }
+
 .cross {
-  color: #e74c3c;       /* merah */
+  color: #e74c3c;
   font-weight: bold;
 }
 
-.check {
-  color: #27ae60;       /* hijau */
-  font-weight: bold;
-}
-
-.drive-icon {
-  width: 18px;       /* ukuran ikon */
-  height: 18px;
-  vertical-align: middle; /* sejajar dengan teks */
-  margin-right: 5px; /* jarak antara ikon dan teks */
-}
+.drive-icon,
 .create-icon {
-  width: 18px;       /* ukuran ikon */
+  width: 18px;
   height: 18px;
-  vertical-align: middle; /* sejajar dengan teks */
-  margin-right: 5px; /* jarak antara ikon dan teks */
+  vertical-align: middle;
+  margin-right: 5px;
 }
 
-
-
-
-/* TUTORIAL SECTION*/
-
+/* TUTORIAL SECTION */
 .tutorial-section {
   background: #f0ebf8;
   padding: 40px 10px;
@@ -591,19 +546,14 @@ padding-top: 15px;
 .tutorial-title {
   font-size: 32px;
   font-weight: bold;
-  color: #333; /* warna item bold */
+  color: #333;
   margin-bottom: 0px;
-  padding-bottom: 0px;
-}
-
-.tutorial-title h1 {
-margin: 0px;
-padding: 0px;
+  padding-top: 40px;
 }
 
 .tutorial-desc {
   font-size: 18px;
-  color: #555; /* warna item biasa */
+  color: #555;
   margin-bottom: 10px;
   margin-top: 0px;
 }
@@ -621,81 +571,43 @@ padding: 0px;
   transition: all 0.3s ease;
 }
 
-/* hover outline gradient */
 .tutorial-img:hover {
   border: 2px solid transparent;
   border-image: linear-gradient(90deg, #4a90e2, #6a5acd, #00c9a7) 1;
   box-shadow: 0 6px 16px rgba(0,0,0,0.2);
 }
 
-/* strip gradient di bawah container */
-/* Strip gradient sebagai elemen biasa */
 .tutorial-outline {
   width: 100%;
   height: 2px;
-  margin-top: 20px; /* jarak dari konten */
+  margin-top: 20px;
   background: linear-gradient(90deg, #4a90e2, #6a5acd, #00c9a7);
 }
+
 .info-box {
   max-width: 550px;
   margin: 10px auto;
   padding: 10px;
-  border-radius: 10px;             /* rounded */
-  background-color: #f0f0f0;       /* abu-abu awal */
-  border: 2px dashed #000;         /* outline putus-putus hitam */
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  border: 2px dashed #000;
   transition: background 0.4s ease, border 0.4s ease;
 }
 
-
 .info-box a {
-  text-decoration: none;   /* awal tanpa underline */
-  font-size: 13px;         /* aturan font size */
+  text-decoration: none;
+  font-size: 13px;
   font-weight: bold;
   color: #333;
 }
 
 .info-box:hover a {
-  color: #f44336;             /* teks jadi putih saat background gradasi */
-  text-decoration: underline; /* underline muncul saat hover */
+  color: #f44336;
+  text-decoration: underline;
 }
+
 .about {
   background: #f4f4f9;
-}
-
-
-
-
-/* Saat layar sempit */
-@media (max-width: 600px) {
-  header {
-    height: 100px; /* 2x lipat dari default */
-  }
-
-  .header-container {
-    flex-direction: column; /* susun vertikal */
-    align-items: center;
-  }
-
-  .title-container {
-    padding-top: 10px; /* tambahan padding atas */
-  }
-
-  .menu-container {
-    margin-top: 10px; /* menu turun ke bawah judul */
-    justify-content: center;
-  }
-.hero {
-  padding: 120px 20px;
-  width: 100%;
-  min-height: 100vh; /* isi section minimal setinggi layar */
-  box-sizing: border-box; /* padding dihitung dalam tinggi total */
-  
-}
-
-}
-
-
-.about {
   max-width: 900px;
   margin: 40px auto;
   padding: 20px;
@@ -703,13 +615,13 @@ padding: 0px;
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 2px 1fr; /* kiri | separator | kanan */
+  grid-template-columns: 1fr 2px 1fr;
   gap: 20px;
   align-items: center;
 }
 
 .about-left .text-wrapper {
-  text-align: center; /* rata tengah */
+  text-align: center;
   font-size: 14px;
   line-height: 1.6;
 }
@@ -721,7 +633,7 @@ padding: 0px;
 }
 
 .about-right {
-  text-align: left; /* rata kiri */
+  text-align: left;
 }
 
 .contact-item {
@@ -736,19 +648,45 @@ padding: 0px;
   margin-right: 10px;
 }
 
-/* Footer melayang */
-/* Footer normal di bagian paling bawah konten */
+/* Footer normal menempel di bawah konten */
 footer {
-  position: fixed;
-  bottom: 0;
+  position: relative;
   width: 100%;
   background: #222;
   color: #ccc;
   text-align: center;
-  height: 30px; /* setengah dari header */
+  padding: 20px 0;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 0.8em;
+  clear: both;
 }
 
+/* Responsive Media Query */
+@media (max-width: 600px) {
+  header {
+    height: 100px;
+  }
+
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title-container {
+    padding-top: 10px;
+  }
+
+  .menu-container {
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 120px 20px;
+    width: 100%;
+    min-height: auto;
+    box-sizing: border-box;
+  }
+}
