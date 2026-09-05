@@ -650,18 +650,19 @@ header {
 
 /* Footer normal menempel di bawah konten */
 footer {
-  position: relative;
+  position: fixed;
+  bottom: 0;
   width: 100%;
   background: #222;
   color: #ccc;
   text-align: center;
-  padding: 20px 0;
+  height: 30px; /* setengah dari header */
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 0.8em;
-  clear: both;
 }
+
 
 /* Responsive Media Query */
 @media (max-width: 600px) {
