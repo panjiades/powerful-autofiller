@@ -1,165 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Powerful Google Form Filler</title>
-  <link rel="stylesheet" href="/style.css">
-  <link rel="icon" type="image/png" href="/favicon.png">
-</head>
-<body>
-
-  <!-- Header -->
-  <header>
-    <div class="header-container">
-      <div class="title-container">
-        <img src="/Logo2.png" alt="Logo" class="logo">
-        <div class="header-title">Powerful Google Form Filler</div>
-      </div>
-      <nav class="menu-container">
-        <a href="/" class="active">Home</a>
-        <a href="/tutorial/google_form">Usage tutorials</a>
-        <a href="/privacy">Privacy Policy</a>
-        <a href="/about">About</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
+<!-- Hero Section (3 Cardbox) -->
   <section id="hero" class="hero">
-    <h1>
-      <span class="gradient-text">Save your time !!!</span>
-    </h1>
-    <p>Fill smarter, fast and automated solution for filling out Google Forms easily. Many features work.
-      <br>
-      Text input <span class="check">✓</span>  
-      Choice <span class="check">✓</span>  
-      Checkbox <span class="check">✓</span>  
-      Drop-down <span class="check">✓</span>  
-      Date&Time <span class="check">✓</span>
-      ...,etc
-    </p>
-    <!-- Row flex -->
-    <div class="hero-row">
-      <img src="/gambar1.png" alt="Preview 1" class="hero-img">
-      <img src="/gambar2.png" alt="Preview 2" class="hero-img2">
-    </div>
-    <a href="https://chrome.google.com/webstore/detail/onnndeaaamehgojlligapejaichghljj" target="_blank">
-      <button class="hero-btn">Get Extension Here</button>
-    </a>
-  </section>
-
-  <!-- ====== TAMBAHAN BARU: 3 FLEXBOX PLATFORMS ====== -->
-  <section id="platforms" class="platforms">
-    <h1>
-      <span class="gradient-text">Supported Platforms</span>
-    </h1>
-    <p>Works seamlessly across multiple ecosystems</p>
-    
-    <div class="platform-container">
-      <!-- Card 1: Google Form -->
-      <div class="platform-card">
-        <h3>Google Form</h3>
-        <p>Fast and automated solution for filling out standard Google Forms easily.</p>
-        <!-- Tombol ini bisa di-link ke halaman tutorial masing-masing -->
-        <a href="/tutorial/google_form/" class="platform-btn">Learn More</a>
-      </div>
-
-      <!-- Card 2: App Script -->
-      <div class="platform-card">
-        <h3>App Script</h3>
-        <p>Integrate deeply with Google Apps Script for advanced custom workflows.</p>
-        <a href="/tutorial/app_script/" class="platform-btn">Learn More</a>
-      </div>
-
-      <!-- Card 3: App Sheet -->
-      <div class="platform-card">
-        <h3>App Sheet</h3>
-        <p>Accelerate data entry and management within your custom AppSheet.</p>
-        <a href="/tutorial/app_sheet/" class="platform-btn">Learn More</a>
-      </div>
-    </div>
-  </section>
-  <!-- ================================================= -->
-
-  <!-- Pricing Section -->
-  <section id="pricing" class="pricing">
-    <h1>
-      <span class="gradient-text">Get product key from 3rd Marketplace..</span>
-    </h1>
-    <p>You can get product keys from several marketplace providers. This is intended to make it easier for users to make payments using their card options.</p>
-
-    <div class="pricing-container">
-      <!-- Card 1 -->
-      <div class="price-card">
-        <a href="https://mayar.id" target="_blank" class="price-card" title="Click to buy via Gumroad">
-        <div class="price-top">$ 5</div>
-        <div class="price-support">Payment Support : Paypal, Debit Card, Credit Card, American Express, Aple Pay, Google Pay </div>   
-        <div class="price-country">For Country : All Country (Global)</div>
-        <div class="price-footer">Gumroad</div>
-        </a>
-      </div>
+    <div class="hero-cards-container">
       
-      <!-- Card 2 -->
-      <div class="price-card">
-        <a href="https://mayar.id" target="_blank" class="price-card" title="Klik untuk beli melaui di Mayar.id">
-        <div class="price-top">Rp. 55.000</div>
-        <div class="price-support">Payment Support : QRISH, DANA, GOPAY, OVO, Virtual Account (VA) </div>  
-        <div class="price-country">For Country : Indonesia</div>
-        <div class="price-footer">Mayar.id</div>
-        </a>
+      <!-- CARD 1: Google Form -->
+      <div class="hero-card">
+        <h3>Google Form</h3>
+        <h1><span class="gradient-text">Save your time !!!</span></h1>
+        <p>Fill smarter, fast and automated solution for filling out Google Forms easily.<br><br>
+          Text input <span class="check">✓</span>  
+          Choice <span class="check">✓</span>  
+          Checkbox <span class="check">✓</span>  
+          Drop-down <span class="check">✓</span>  
+          Date&Time <span class="check">✓</span>
+        </p>
+        <div class="hero-row">
+          <img src="/gambar1.png" alt="Preview 1" class="hero-img">
+          <img src="/gambar2.png" alt="Preview 2" class="hero-img2">
+        </div>
+        <div class="hero-btn-wrapper">
+          <a href="https://chrome.google.com/webstore/detail/onnndeaaamehgojlligapejaichghljj" target="_blank">
+            <button class="hero-btn">Get Extension</button>
+          </a>
+        </div>
       </div>
+
+      <!-- CARD 2: App Script -->
+      <div class="hero-card">
+        <h3>App Script</h3>
+        <h1><span class="gradient-text">Save your time !!!</span></h1>
+        <p>Deep integration with Google Apps Script to automate custom workflows and triggers easily.<br><br>
+          Webhooks <span class="check">✓</span>  
+          Triggers <span class="check">✓</span>  
+          Custom API <span class="check">✓</span>  
+          JSON Data <span class="check">✓</span>  
+          Auto Reply <span class="check">✓</span>
+        </p>
+        <div class="hero-row">
+          <!-- Gambar bisa kamu ganti dengan gambar app script nantinya -->
+          <img src="/gambar1.png" alt="Preview 1" class="hero-img">
+          <img src="/gambar2.png" alt="Preview 2" class="hero-img2">
+        </div>
+        <div class="hero-btn-wrapper">
+          <a href="#" target="_blank">
+            <button class="hero-btn">Get Extension</button>
+          </a>
+        </div>
+      </div>
+
+      <!-- CARD 3: App Sheet -->
+      <div class="hero-card">
+        <h3>App Sheet</h3>
+        <h1><span class="gradient-text">Save your time !!!</span></h1>
+        <p>Accelerate your data entry and management within your custom AppSheet applications.<br><br>
+          Fast Entry <span class="check">✓</span>  
+          Sync Data <span class="check">✓</span>  
+          Dashboard <span class="check">✓</span>  
+          Relational <span class="check">✓</span>  
+          Export <span class="check">✓</span>
+        </p>
+        <div class="hero-row">
+          <!-- Gambar bisa kamu ganti dengan gambar app sheet nantinya -->
+          <img src="/gambar1.png" alt="Preview 1" class="hero-img">
+          <img src="/gambar2.png" alt="Preview 2" class="hero-img2">
+        </div>
+        <div class="hero-btn-wrapper">
+          <a href="#" target="_blank">
+            <button class="hero-btn">Get Extension</button>
+          </a>
+        </div>
+      </div>
+
     </div>
-    <br><br>
-    
-    <h1>
-      <span class="gradient-text">Benefits :</span>
-    </h1>
-    
-    <table class="comparison-table">
-      <thead>
-        <tr>
-          <th>Feature</th>
-          <th>Free</th>
-          <th>Pro</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><img src="/create.png" alt="Google Drive" class="create-icon" /> Create data</td>
-          <td><span class="cross">3</span></td>
-          <td><span class="check">✔ Unlimited</span></td>
-        </tr>
-        <tr>
-          <td><img src="/drive-logo.png" alt="Google Drive" class="drive-icon" /> Backup to Google Drive</td>
-          <td><span class="cross">✘</span></td>
-          <td><span class="check">✔</span></td>
-        </tr>
-        <tr>
-          <td><img src="/drive-logo.png" alt="Google Drive" class="drive-icon" /> Restore from Google Drive</td>
-          <td><span class="cross">✘</span></td>
-          <td><span class="check">✔</span></td>
-        </tr>
-        <tr>
-          <td>Local autosave</td>
-          <td><span class="check">✔</span></td>
-          <td><span class="check">✔</span></td>
-        </tr>
-        <tr>
-          <td class="wrap-text">Email is always PRO, wherever you log in</td>
-          <td><span class="cross"></span></td>
-          <td><span class="check">✔</span></td>
-        </tr>
-      </tbody>
-    </table>
-    <br><br><br><br>
   </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2026 Powerful Google Form Filler</p>
-  </footer>
-
-  <script src="/script.js"></script>
-</body>
-</html>
