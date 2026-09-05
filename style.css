@@ -14,6 +14,125 @@ section {
   overflow-y: visible;    /* Jangan buat scrollbar internal */
 }
 
+
+/* ============ AFTER PAYMENT BEAUTIFUL STYLING ============ */
+.success-section {
+  background: #f4f4f9;
+  padding: 100px 20px 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.success-container {
+  max-width: 750px;
+  width: 100%;
+  text-align: center;
+}
+
+.success-title {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.success-subtitle {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+/* Card Langkah */
+.success-step-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+  text-align: left;
+  border: 1px solid #eaeaea;
+  position: relative;
+}
+
+.step-number {
+  display: inline-block;
+  background: linear-gradient(90deg, #4a90e2, #6a5acd, #00c9a7);
+  color: white;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 20px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.success-step-card p {
+  color: #333;
+  font-size: 15px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.success-image-wrapper {
+  text-align: center;
+  background: #f9f9fb;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px dashed #ddd;
+}
+
+.success-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.success-badge {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 15px;
+}
+
+.success-badge span {
+  background: #e8f8f5;
+  color: #27ae60;
+  border: 1px solid #a3e4d7;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+/* Kotak Bantuan / Support Box */
+.success-support-box {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+  border: 1px solid #eaeaea;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.success-support-box h3 {
+  margin: 0 0 5px 0;
+  color: #333;
+  font-size: 18px;
+}
+
+.success-support-box p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.success-support-box .contact-list {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+
 /* Styling untuk Box Contact Support yang Sejajar */
 .contact-support-wrapper {
   display: flex;
