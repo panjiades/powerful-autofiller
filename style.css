@@ -2,18 +2,17 @@ html {
   scroll-behavior: smooth;
 }
 
-main {
-  /* scroll-snap dihapus agar bisa scroll bebas di HP */
-  height: 100vh;
-}
+/* Hapus aturan main dan section yang mengunci tinggi layar */
 
+/* Aturan umum section yang bersih untuk sistem multi-page */
 section {
-  /* scroll-snap-align dihapus */
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
+  display: block;
+  text-align: center;
+  padding: 80px 20px 40px 20px;
+  min-height: auto;
+  max-height: none;       /* Jangan batasi tinggi section */
+  overflow-y: visible;    /* Jangan buat scrollbar internal */
 }
-
 
 /* Styling untuk Box Contact Support yang Sejajar */
 .contact-support-wrapper {
@@ -622,16 +621,16 @@ padding: 0px;
 }
 
 /* Footer melayang */
+/* Footer normal di bagian paling bawah konten */
 footer {
-  position: fixed;
-  bottom: 0;
   width: 100%;
   background: #222;
   color: #ccc;
   text-align: center;
-  height: 30px; /* setengah dari header */
+  padding: 15px 0;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 0.8em;
+  position: relative; /* Diubah dari fixed agar tidak melayang menutupi konten */
 }
