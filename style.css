@@ -3,17 +3,15 @@ html {
 }
 
 main {
-  scroll-snap-type: y mandatory; /* wajib snap ke section */
-  overflow-y: scroll;
+  /* scroll-snap dihapus agar bisa scroll bebas di HP */
   height: 100vh;
 }
 
 section {
-  scroll-snap-align: start; /* setiap section mulai dari atas layar */
-  min-height: 100vh;        /* tiap section setinggi layar penuh */
+  /* scroll-snap-align dihapus */
+  min-height: 100vh;
   display: flex;
   justify-content: center;
-
 }
 
 /* Gradient untuk kata Welcome */
@@ -36,10 +34,10 @@ body {
   font-family: Arial, sans-serif;
   background: #f4f4f9;
   color: #333;
-  overflow: hidden; /* matikan scroll global */
-
+  /* overflow: hidden; DIHAPUS DISINI */
 }
 
+/* ... (Lanjutkan dengan sisa CSS kamu di bawahnya mulai dari header { ... }) ... */
 /* Header melayang */
 header {
   position: fixed;
