@@ -16,7 +16,6 @@ section {
 
 /* ============ SECTION PLATFORMS (3 DIVS) ========== */
 .platforms {
-  background: #f0ebf8; /* Warna latar belakang sedikit beda agar terpisah dari hero */
   padding: 60px 20px;
   text-align: center;
   min-height: auto;
