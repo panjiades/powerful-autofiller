@@ -14,6 +14,79 @@ section {
   justify-content: center;
 }
 
+
+/* ============ SECTION PLATFORMS (3 DIVS) ========== */
+.platforms {
+  background: #f0ebf8; /* Warna latar belakang sedikit beda agar terpisah dari hero */
+  padding: 60px 20px;
+  text-align: center;
+  min-height: auto;
+}
+
+.platforms h1 {
+  margin-top: 0;
+}
+
+.platform-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; /* Wajib: agar otomatis turun ke bawah saat di layar HP */
+  margin-top: 40px;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.platform-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px 20px;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid transparent; /* Persiapan untuk hover gradien */
+}
+
+.platform-card:hover {
+  border-image: linear-gradient(90deg, #4a90e2, #6a5acd, #00c9a7) 1;
+  transform: translateY(-5px); /* Efek melayang sedikit */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.platform-card h3 {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 22px;
+}
+
+.platform-card p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  flex-grow: 1; /* Mendorong tombol selalu berada di paling bawah */
+}
+
+.platform-btn {
+  padding: 10px 20px;
+  background: #eee;
+  color: #333;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.platform-card:hover .platform-btn {
+  background: linear-gradient(90deg, #4a90e2, #6a5acd, #00c9a7);
+  color: white;
+}
+
+
 /* Gradient untuk kata Welcome */
 .gradient-text {
   background: linear-gradient(90deg, #4a90e2, #6a5acd, #00c9a7);
