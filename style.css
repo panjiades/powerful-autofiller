@@ -14,6 +14,42 @@ section {
   justify-content: center;
 }
 
+
+/* Styling untuk Box Contact Support yang Sejajar */
+.contact-support-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Membuat semua isi berada di tengah secara horizontal */
+  margin-top: 20px;
+}
+
+.contact-title {
+  margin: 8px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Jarak antar baris Gmail dan WhatsApp */
+  align-items: flex-start; /* Meratakan sisi kiri teks kontak agar lurus rapi */
+  margin: 10px 0;
+}
+
+/* Memperbaiki .contact-item2 yang sebelumnya ada typo (flex-coloum) */
+.contact-item2 {
+  display: flex;
+  align-items: center; /* Menjajarkan ikon dan teks agar sejajar di tengah secara vertikal */
+}
+
+.contact-item2 .icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  object-fit: contain;
+}
+
 /* ============ SECTION PLATFORMS (3 DIVS) ========== */
 .platforms {
   padding: 60px 20px;
