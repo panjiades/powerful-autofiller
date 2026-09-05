@@ -8,12 +8,11 @@ html {
 section {
   display: block;
   text-align: center;
-  padding: 80px 20px 40px 20px;
-  min-height: auto;
-  max-height: none;       /* Jangan batasi tinggi section */
-  overflow-y: visible;    /* Jangan buat scrollbar internal */
+  padding: 100px 20px 40px 20px;
+  min-height: auto;       /* Hapus 100vh */
+  max-height: none;       /* Hapus pembatasan tinggi */
+  overflow-y: visible;    /* Hilangkan scrollbar internal */
 }
-
 
 /* ============ AFTER PAYMENT BEAUTIFUL STYLING ============ */
 .success-section {
